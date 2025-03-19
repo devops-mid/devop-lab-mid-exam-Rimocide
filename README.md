@@ -2,7 +2,7 @@
 
 # Simple Web App
 
-This is a simple web application with a form that stores data in a PostgreSQL database.
+This is a simple web application with a form that stores data in a PostgreSQL database. THE MID TERM SOLUTION IS IN THE FOLDER WITH THE REPO'S NAME.
 
 ## Tasks
 1. Clone the repository and create a feature branch.
