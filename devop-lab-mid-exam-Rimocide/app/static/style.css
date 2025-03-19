@@ -1,0 +1,164 @@
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #00bcd4, #8e24aa); /* Soft gradient */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    animation: background-animation 6s ease-in-out infinite; /* Smooth background animation */
+}
+
+/* Background Animation */
+@keyframes background-animation {
+    0% {
+        background: linear-gradient(135deg, #00bcd4, #8e24aa);
+    }
+    50% {
+        background: linear-gradient(135deg, #ff4081, #1e88e5);
+    }
+    100% {
+        background: linear-gradient(135deg, #00bcd4, #8e24aa);
+    }
+}
+
+/* Centered container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 1;
+    position: absolute;
+}
+
+header h1 {
+    color: white;
+    font-size: 36px;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    animation: fade-in 2s ease-out;
+}
+
+/* Animation for header */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Card Style */
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px 40px;
+    width: 380px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    backdrop-filter: blur(12px);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    animation: card-slide-in 0.6s ease-out;
+}
+
+@keyframes card-slide-in {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card h2 {
+    font-size: 26px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.input-group {
+    margin-bottom: 18px;
+    transition: all 0.3s ease;
+}
+
+.input-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: 2px solid #ccc;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 16px;
+}
+
+.input-group input:focus {
+    border-color: #00bcd4;
+    box-shadow: 0 0 8px rgba(0, 188, 212, 0.5);
+    outline: none;
+}
+
+/* Submit Button */
+button {
+    background: #00bcd4;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0097a7;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .card {
+        width: 90%;
+        padding: 25px;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    .card h2 {
+        font-size: 22px;
+    }
+}
